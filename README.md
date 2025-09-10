@@ -1,116 +1,97 @@
 # 🛡️ Self-Adaptive Honeypot Network  
 
-A **Self-Adaptive Honeypot Network** designed to detect, log, and analyze suspicious activities while dynamically defending against attacks. This project integrates **behavior analysis, adaptive database structures, and secure authentication** to create a proactive security environment.  
+This is a **self-adaptive honeypot project** that mimics a vulnerable web application to attract and log potential attackers. It provides fake admin access and adaptive defense mechanisms to analyze attack behavior while protecting real data.  
 
 ---
 
-## 🔥 Features  
+## 📂 Project Structure  
 
-- **User Authentication & Security**  
-  - User ID–based restrictions instead of IP blocking.  
-  - 4 failed login attempts → triggers security response.  
-  - Adaptive password generation based on survey inputs.  
-  - SHA-512/AES encrypted password storage.  
+Ignit project/
+├── honeypot.db # SQLite database
+├── server.py # Main backend script (Flask)
+├── style.css # Styling for frontend pages
+└── templates/ # HTML templates
+├── fake_admin.html # Fake admin panel (honeypot trap)
+└── index.html # User-facing login/index page
 
-- **Attack Prevention**  
-  - Secure login page with behavior analysis.  
-  - Rate limiting & bot protection.  
-  - Burp Suite & automated attack detection.  
-  - JWT-based expiring cookies (regenerated every 30 seconds).  
-
-- **Password System**  
-  - 16-character system-generated passwords with randomness.  
-  - Auto-hiding after 30 seconds.  
-  - Survey-based password recovery.  
-
-- **Honeypot Defense**  
-  - Real-time attack logging & analysis.  
-  - Dynamic database table ID swapping when suspicious activity is detected.  
-  - Behavior monitoring to flag intrusions.  
-
-- **API Security Service**  
-  - Token-based API authentication.  
-  - Secure TLS/SSL-based communication.  
+yaml
+Copy code
 
 ---
 
-## 🏗️ Project Architecture (Modules)  
+## 🚀 Features  
 
-1. **User Authentication & Security System**  
-2. **Secure Login & Attack Prevention**  
-3. **Password Generation & Recovery**  
-4. **Honeypot Detection & Response**  
-5. **API Security Service**  
-6. **Final Testing & Deployment**  
+- **Fake Admin Panel:** Attracts attackers with a decoy login system.  
+- **SQLite Logging:** Stores failed login attempts and suspicious activities.  
+- **Adaptive Response:** Can trigger fake responses or modify traps dynamically.  
+- **Simple Frontend:** Styled with CSS and Flask templates.  
 
 ---
 
 ## ⚙️ Tech Stack  
 
-- **Backend:** Python (Flask / FastAPI)  
-- **Frontend:** React / HTML-CSS-JS (for login system)  
-- **Database:** PostgreSQL / MySQL  
-- **Security:** SHA-512, AES, JWT, TLS/SSL  
-- **Deployment:** Cloud hosting (AWS / DigitalOcean)  
+- **Backend:** Python (Flask)  
+- **Database:** SQLite (`honeypot.db`)  
+- **Frontend:** HTML, CSS (with Flask templates)  
 
 ---
 
-## 🚀 Installation & Setup  
+## 📦 Installation & Setup  
 
-1. Clone the repo:  
+1. Clone the repository:  
    ```bash
    git clone https://github.com/your-username/honeypot-network.git
-   cd honeypot-network
-   ```
+   cd honeypot-network/Ignit\ project
+Create a virtual environment and install dependencies:
 
-2. Create a virtual environment & install dependencies:  
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # (Linux/Mac)
-   venv\Scripts\activate      # (Windows)
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
 
-   pip install -r requirements.txt
-   ```
+pip install -r requirements.txt
+Run the server:
 
-3. Configure database in `.env` file:  
-   ```env
-   DATABASE_URL=your_database_url
-   SECRET_KEY=your_secret_key
-   ```
+bash
+Copy code
+python server.py
+Open in browser:
 
-4. Run the backend server:  
-   ```bash
-   uvicorn main:app --reload
-   ```
+cpp
+Copy code
+http://127.0.0.1:5000
+📖 Usage
+Navigate to the login page (index.html).
 
-5. (Optional) Run frontend app if included.  
+Any attempt to access the fake admin panel (fake_admin.html) is logged into the database.
+
+Use the logs for attack pattern analysis.
+
+🧪 Example Requirements (requirements.txt)
+txt
+Copy code
+Flask
+🔮 Future Enhancements
+Add behavior-based adaptive responses.
+
+Expand fake admin functionalities to mislead attackers longer.
+
+Integrate with real-time dashboards for monitoring.
+
+Support PostgreSQL/MySQL instead of SQLite.
+
+🤝 Contributing
+Contributions are welcome! Please fork the repo and submit a pull request.
+
+📜 License
+This project is licensed under the MIT License.
+
+yaml
+Copy code
 
 ---
 
-## 📖 Usage  
+Would you like me to **write and export this README.md file** directly into your extracted project folder (`Ignit project/`) so it’s ready to push to GitHub?
 
-- Register as a user → receive a system-generated password.  
-- Login attempts are monitored for suspicious activity.  
-- Multiple failed attempts → triggers honeypot response.  
-- Admins can view **attack logs** and analyze intrusion patterns.  
 
----
-
-## 🔮 Future Enhancements  
-
-- AI-driven anomaly detection.  
-- Multi-layer honeypot traps with decoy databases.  
-- Advanced visualization dashboard for attack patterns.  
-- Integration with SIEM solutions.  
-
----
-
-## 🤝 Contributing  
-
-Contributions are welcome! Please fork the repo and submit a pull request.  
-
----
-
-## 📜 License  
-
-This project is licensed under the MIT License.  
