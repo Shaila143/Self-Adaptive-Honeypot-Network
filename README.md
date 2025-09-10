@@ -1,131 +1,116 @@
-# 🛡️ Self-Adaptive Honeypot Network
+# 🛡️ Self-Adaptive Honeypot Network  
 
-A Self-Adaptive Honeypot Network designed to detect, log, and analyze suspicious activities while dynamically defending against attacks. This project integrates behavior analysis, adaptive database structures, and secure authentication to create a proactive security environment.
+A **Self-Adaptive Honeypot Network** designed to detect, log, and analyze suspicious activities while dynamically defending against attacks. This project integrates **behavior analysis, adaptive database structures, and secure authentication** to create a proactive security environment.  
 
-🔥 Features
+---
 
-User Authentication & Security
+## 🔥 Features  
 
-User ID–based restrictions instead of IP blocking.
+- **User Authentication & Security**  
+  - User ID–based restrictions instead of IP blocking.  
+  - 4 failed login attempts → triggers security response.  
+  - Adaptive password generation based on survey inputs.  
+  - SHA-512/AES encrypted password storage.  
 
-4 failed login attempts → triggers security response.
+- **Attack Prevention**  
+  - Secure login page with behavior analysis.  
+  - Rate limiting & bot protection.  
+  - Burp Suite & automated attack detection.  
+  - JWT-based expiring cookies (regenerated every 30 seconds).  
 
-Adaptive password generation based on survey inputs.
+- **Password System**  
+  - 16-character system-generated passwords with randomness.  
+  - Auto-hiding after 30 seconds.  
+  - Survey-based password recovery.  
 
-SHA-512/AES encrypted password storage.
+- **Honeypot Defense**  
+  - Real-time attack logging & analysis.  
+  - Dynamic database table ID swapping when suspicious activity is detected.  
+  - Behavior monitoring to flag intrusions.  
 
-Attack Prevention
+- **API Security Service**  
+  - Token-based API authentication.  
+  - Secure TLS/SSL-based communication.  
 
-Secure login page with behavior analysis.
+---
 
-Rate limiting & bot protection.
+## 🏗️ Project Architecture (Modules)  
 
-Burp Suite & automated attack detection.
+1. **User Authentication & Security System**  
+2. **Secure Login & Attack Prevention**  
+3. **Password Generation & Recovery**  
+4. **Honeypot Detection & Response**  
+5. **API Security Service**  
+6. **Final Testing & Deployment**  
 
-JWT-based expiring cookies (regenerated every 30 seconds).
+---
 
-Password System
+## ⚙️ Tech Stack  
 
-16-character system-generated passwords with randomness.
+- **Backend:** Python (Flask / FastAPI)  
+- **Frontend:** React / HTML-CSS-JS (for login system)  
+- **Database:** PostgreSQL / MySQL  
+- **Security:** SHA-512, AES, JWT, TLS/SSL  
+- **Deployment:** Cloud hosting (AWS / DigitalOcean)  
 
-Auto-hiding after 30 seconds.
+---
 
-Survey-based password recovery.
+## 🚀 Installation & Setup  
 
-Honeypot Defense
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/your-username/honeypot-network.git
+   cd honeypot-network
+   ```
 
-Real-time attack logging & analysis.
+2. Create a virtual environment & install dependencies:  
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # (Linux/Mac)
+   venv\Scripts\activate      # (Windows)
 
-Dynamic database table ID swapping when suspicious activity is detected.
+   pip install -r requirements.txt
+   ```
 
-Behavior monitoring to flag intrusions.
+3. Configure database in `.env` file:  
+   ```env
+   DATABASE_URL=your_database_url
+   SECRET_KEY=your_secret_key
+   ```
 
-API Security Service
+4. Run the backend server:  
+   ```bash
+   uvicorn main:app --reload
+   ```
 
-Token-based API authentication.
+5. (Optional) Run frontend app if included.  
 
-Secure TLS/SSL-based communication.
+---
 
-🏗️ Project Architecture (Modules)
+## 📖 Usage  
 
-User Authentication & Security System
+- Register as a user → receive a system-generated password.  
+- Login attempts are monitored for suspicious activity.  
+- Multiple failed attempts → triggers honeypot response.  
+- Admins can view **attack logs** and analyze intrusion patterns.  
 
-Secure Login & Attack Prevention
+---
 
-Password Generation & Recovery
+## 🔮 Future Enhancements  
 
-Honeypot Detection & Response
+- AI-driven anomaly detection.  
+- Multi-layer honeypot traps with decoy databases.  
+- Advanced visualization dashboard for attack patterns.  
+- Integration with SIEM solutions.  
 
-API Security Service
+---
 
-Final Testing & Deployment
+## 🤝 Contributing  
 
-⚙️ Tech Stack
+Contributions are welcome! Please fork the repo and submit a pull request.  
 
-Backend: Python (Flask / FastAPI)
+---
 
-Frontend: React / HTML-CSS-JS (for login system)
+## 📜 License  
 
-Database: PostgreSQL / MySQL
-
-Security: SHA-512, AES, JWT, TLS/SSL
-
-Deployment: Cloud hosting (AWS / DigitalOcean)
-
-🚀 Installation & Setup
-
-Clone the repo:
-
-git clone https://github.com/your-username/honeypot-network.git
-cd honeypot-network
-
-
-Create a virtual environment & install dependencies:
-
-python -m venv venv
-source venv/bin/activate   # (Linux/Mac)
-venv\Scripts\activate      # (Windows)
-
-pip install -r requirements.txt
-
-
-Configure database in .env file:
-
-DATABASE_URL=your_database_url
-SECRET_KEY=your_secret_key
-
-
-Run the backend server:
-
-uvicorn main:app --reload
-
-
-(Optional) Run frontend app if included.
-
-📖 Usage
-
-Register as a user → receive a system-generated password.
-
-Login attempts are monitored for suspicious activity.
-
-Multiple failed attempts → triggers honeypot response.
-
-Admins can view attack logs and analyze intrusion patterns.
-
-🔮 Future Enhancements
-
-AI-driven anomaly detection.
-
-Multi-layer honeypot traps with decoy databases.
-
-Advanced visualization dashboard for attack patterns.
-
-Integration with SIEM solutions.
-
-🤝 Contributing
-
-Contributions are welcome! Please fork the repo and submit a pull request.
-
-📜 License
-
-This project is licensed under the MIT License.
+This project is licensed under the MIT License.  
