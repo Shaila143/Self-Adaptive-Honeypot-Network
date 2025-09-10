@@ -14,9 +14,6 @@ Ignit project/
 ├── fake_admin.html # Fake admin panel (honeypot trap)
 └── index.html # User-facing login/index page
 
-yaml
-Copy code
-
 ---
 
 ## 🚀 Features  
@@ -44,8 +41,6 @@ Copy code
    cd honeypot-network/Ignit\ project
 Create a virtual environment and install dependencies:
 
-bash
-Copy code
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
@@ -58,8 +53,6 @@ Copy code
 python server.py
 Open in browser:
 
-cpp
-Copy code
 http://127.0.0.1:5000
 📖 Usage
 Navigate to the login page (index.html).
@@ -69,8 +62,6 @@ Any attempt to access the fake admin panel (fake_admin.html) is logged into the 
 Use the logs for attack pattern analysis.
 
 🧪 Example Requirements (requirements.txt)
-txt
-Copy code
 Flask
 🔮 Future Enhancements
 Add behavior-based adaptive responses.
@@ -87,10 +78,6 @@ Contributions are welcome! Please fork the repo and submit a pull request.
 📜 License
 This project is licensed under the MIT License.
 
-yaml
-Copy code
-
----
 
 Would you like me to **write and export this README.md file** directly into your extracted project folder (`Ignit project/`) so it’s ready to push to GitHub?
 
