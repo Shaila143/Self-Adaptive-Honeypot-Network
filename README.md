@@ -6,13 +6,15 @@ This is a **self-adaptive honeypot project** that mimics a vulnerable web applic
 
 ## 📂 Project Structure  
 
+```
 Ignit project/
-├── honeypot.db # SQLite database
-├── server.py # Main backend script (Flask)
-├── style.css # Styling for frontend pages
-└── templates/ # HTML templates
-├── fake_admin.html # Fake admin panel (honeypot trap)
-└── index.html # User-facing login/index page
+├── honeypot.db              # SQLite database
+├── server.py                # Main backend script (Flask)
+├── style.css                # Styling for frontend pages
+└── templates/               # HTML templates
+    ├── fake_admin.html       # Fake admin panel (honeypot trap)
+    └── index.html            # User-facing login/index page
+```
 
 ---
 
@@ -39,46 +41,60 @@ Ignit project/
    ```bash
    git clone https://github.com/your-username/honeypot-network.git
    cd honeypot-network/Ignit\ project
-Create a virtual environment and install dependencies:
+   ```
 
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+2. Create a virtual environment and install dependencies:  
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # Linux/Mac
+   venv\Scripts\activate      # Windows
 
-pip install -r requirements.txt
-Run the server:
+   pip install -r requirements.txt
+   ```
 
-bash
-Copy code
-python server.py
-Open in browser:
+3. Run the server:  
+   ```bash
+   python server.py
+   ```
 
-http://127.0.0.1:5000
-📖 Usage
-Navigate to the login page (index.html).
+4. Open in browser:  
+   ```
+   http://127.0.0.1:5000
+   ```
 
-Any attempt to access the fake admin panel (fake_admin.html) is logged into the database.
+---
 
-Use the logs for attack pattern analysis.
+## 📖 Usage  
 
-🧪 Example Requirements (requirements.txt)
+- Navigate to the login page (`index.html`).  
+- Any attempt to access the **fake admin panel** (`fake_admin.html`) is logged into the database.  
+- Use the logs for **attack pattern analysis**.  
+
+---
+
+## 🧪 Example Requirements (`requirements.txt`)  
+
+```txt
 Flask
-🔮 Future Enhancements
-Add behavior-based adaptive responses.
+```
 
-Expand fake admin functionalities to mislead attackers longer.
+---
 
-Integrate with real-time dashboards for monitoring.
+## 🔮 Future Enhancements  
 
-Support PostgreSQL/MySQL instead of SQLite.
+- Add behavior-based adaptive responses.  
+- Expand fake admin functionalities to mislead attackers longer.  
+- Integrate with real-time dashboards for monitoring.  
+- Support PostgreSQL/MySQL instead of SQLite.  
 
-🤝 Contributing
-Contributions are welcome! Please fork the repo and submit a pull request.
+---
 
-📜 License
-This project is licensed under the MIT License.
+## 🤝 Contributing  
 
+Contributions are welcome! Please fork the repo and submit a pull request.  
 
-Would you like me to **write and export this README.md file** directly into your extracted project folder (`Ignit project/`) so it’s ready to push to GitHub?
+---
 
+## 📜 License  
 
+This project is licensed under the MIT License.  
