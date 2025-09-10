@@ -39,7 +39,7 @@ Ignit project/
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/honeypot-network.git
+   git clone https://github.com/Shaila143/Self-Adaptive-Honeypot-Network.git
    cd honeypot-network/Ignit\ project
    ```
 
