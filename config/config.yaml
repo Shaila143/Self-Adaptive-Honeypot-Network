@@ -1,0 +1,6 @@
+database:
+  uri: sqlite:///honeypot.db
+
+security:
+  max_attempts: 3
+  token_expiry: 30s
